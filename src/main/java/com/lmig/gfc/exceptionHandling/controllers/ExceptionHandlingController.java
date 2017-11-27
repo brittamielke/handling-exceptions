@@ -41,9 +41,9 @@ public class ExceptionHandlingController {
 		try {
 			mv.addObject("urlResult", new URL(probablyAUrl));
 		} catch (MalformedURLException mue) {
-			mv.addObject("urlResult", "not a valid URL");
+			mv.addObject("urlFailure", "not a valid URL");
 		} catch (Exception e) {
-			mv.addObject("urlResult", "Unspecified Error Occurred");
+			mv.addObject("urlFailure", "Unspecified Error Occurred");
 		}
 		return mv;
 	}
